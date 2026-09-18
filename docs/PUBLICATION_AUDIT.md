@@ -29,6 +29,13 @@
 - `git diff --cached --check`：通过。
 - 扫描方式为文件清单审阅、文本规则检查和 Git 暂存区复核；本机未安装专用 Gitleaks 扫描器。
 
+### 初始化与身份核验
+
+- 已执行 `init-qiaoshengix.bat`，在 `main` 分支创建独立根提交 `f54b462`。
+- 脚本核验全部可达提交的 Author 和 Committer，均为 `qiaoshengix <qiaoshengix@outlook.com>`。
+- 本地仓库级 `user.name` / `user.email` 已配置为上述身份。
+- 未配置远程地址，未执行 GitHub 上传。GitHub 账号归属仍依赖维护者完成邮箱绑定与验证。
+
 ## 结论边界
 
 这是本地源码与发布范围检查，不代表对所有二进制隐写信息或未知形式的秘密作出绝对保证。没有执行上传，无法仅凭当前本地状态证明原项目过去从未向任何远端泄露过信息。
