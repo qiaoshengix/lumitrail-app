@@ -11,7 +11,6 @@
 - 未复制构建产物、缓存、IDE 配置、日志、本机 SDK 路径及生成文件。
 - 仅公开回环开发地址、保留示例域名及依赖/官方文档地址。
 - Android 包标识 `xyz.qiaosheng.app` 是命名空间，不是网络访问地址，保留以兼容现有工程。
-- 经维护者确认，提交姓名与邮箱公开为 `qiaoshengix <qiaoshengix@outlook.com>`。
 
 ## 检查记录
 
@@ -28,13 +27,6 @@
 - `git check-ignore` 已确认签名配置、密钥、本机路径配置、dev/test/prod 本地配置、`.env` 及 APK 均受忽略规则保护。
 - `git diff --cached --check`：通过。
 - 扫描方式为文件清单审阅、文本规则检查和 Git 暂存区复核；本机未安装专用 Gitleaks 扫描器。
-
-### 初始化与身份核验
-
-- 已执行 `init-qiaoshengix.bat`，在 `main` 分支创建独立根提交 `f54b462`。
-- 脚本核验全部可达提交的 Author 和 Committer，均为 `qiaoshengix <qiaoshengix@outlook.com>`。
-- 本地仓库级 `user.name` / `user.email` 已配置为上述身份。
-- 未配置远程地址，未执行 GitHub 上传。GitHub 账号归属仍依赖维护者完成邮箱绑定与验证。
 
 ## 结论边界
 

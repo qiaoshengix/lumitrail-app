@@ -87,30 +87,7 @@ flutter build apk --release --dart-define-from-file=config/prod.json
 
 独立仓库从已脱敏的当前 App 快照创建，不继承原项目提交历史。
 
-```powershell
-.\init-qiaoshengix.bat
-```
-
-脚本仅操作自身所在仓库，将本地身份设为：
-
-```text
-Author / Committer: qiaoshengix <qiaoshengix@outlook.com>
-```
-
-没有历史时创建首次提交；已有历史时核查全部引用中的作者与提交者，发现不一致则报错，不改写历史。脚本不会创建 GitHub 仓库或推送。以后在这个仓库正常提交会使用本地身份配置；显式覆盖身份、导入其他历史或合并外部提交后，应重新检查。
-
-GitHub 通过提交邮箱关联账号，请确保 `qiaoshengix@outlook.com` 已在你的 GitHub 账号中添加并验证。提交邮箱会出现在公开历史中，此处按维护者确认使用当前本地邮箱。
-
 ## 上传 GitHub
-
-在 GitHub 创建空仓库 `lumitrail-app`，不要自动添加 README 或其他初始化文件。然后在**此独立仓库目录**执行：
-
-```powershell
-git status --short
-git log --all --format="%h %an <%ae> | %cn <%ce>"
-git remote add origin https://github.com/qiaoshengix/lumitrail-app.git
-git push -u origin main
-```
 
 上传范围及已执行检查见 [脱敏检查记录](docs/PUBLICATION_AUDIT.md)。
 
